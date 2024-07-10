@@ -10,6 +10,8 @@ services:
       - POSTGRES_USER=${POSTGRES_USER}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
       - POSTGRES_DB=${POSTGRES_DB}
+    volumes:
+      - 'db:/var/lib/postgresql/data'
     networks:
       - network-journey
 
@@ -31,3 +33,6 @@ services:
 networks:
   network-journey:
     driver: bridge
+
+volumes:
+  db:
