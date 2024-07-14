@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "start": "node build/server.js",
+    "start:prod": "prisma migrate deploy && node build/server.js",
     "build": "tsup src --out-dir build",
     "migrate:dev": "prisma migrate dev",
     "migrate:deploy": "prisma migrate deploy"
